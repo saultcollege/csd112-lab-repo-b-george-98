@@ -38,13 +38,21 @@
 
         <main>
             <h1>Welcome to Brett's Website</h1>
+            <a href="images/picture-of-brett.png" target="_blank">
+                <img src="images/picture-of-brett.png" sizes="(max-width:500px) 150px, (min-width:500px) 500px, 800px"
+                    srcset="images/picture-of-brett-150w.png 150w, images/picture-of-brett-300w.png 300w, images/picture-of-brett.png 800w"
+                    alt="Picture of Brett waving and saying Hello">
+            </a>
             <p>Hello, I'm Brett. When I do go outside I enjoy camping, &amp; finding good walking trails.</p>
             <p>I (less-frequently now) play some video games - they can get really addicting for me.</p>
             <p>Other than that I just talk &amp; goof around with friends.</p>
             <h2>My Favourite Things</h2>
-            <a href="https://www.blacksabbath.com/">
-                <img src="images/logo.png" alt="Black Sabbath Logo">
-            </a>
+            <figure>
+                <a href="https://www.blacksabbath.com/">
+                    <img src="images/logo.png" alt="Black Sabbath Logo">
+                </a>
+                <figcaption>Click the image to visit Black Sabbath's official website!</figcaption>
+            </figure>
             <h3>Favourite Games</h3>
             <ol>
                 <li>Dark Souls</li>
@@ -58,6 +66,19 @@
                 <cite>by <span class="author">Katsushika Hokusai</span></cite>
                 <!--Found me!-->
             </p>
+            <h3>Public Domain Audiobook</h3>
+            <audio controls>
+                <source
+                    src="http://www.archive.org/download/americanpsychology2_1302_librivox/americanpsychology2_11.mp3"
+                    type="audio/mpeg">
+                <a href="http://www.archive.org/download/americanpsychology2_1302_librivox/americanpsychology2_11.mp3">Download
+                    the audiobook</a>
+            </audio>
+            <h3>YouTube Video</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KmtzQCSh6xk"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </main>
 
         <footer>
@@ -68,6 +89,12 @@
             <p>&copy; 2020 <a
                     href="mailto:brett.george@student.saultcollege.ca?subject=Message%20from%20CSD120%20Website">Brett
                     George</a></p>
+            <picture>
+                <source media="(max-width: 70px)" srcset="images/sc-logo.png 1x">
+                <source media="(max-width: 105px)" srcset="images/sc-logo@1.5x.png 1.5x">
+                <source media="(max-width: 140px)" srcset="images/sc-logo@2x.png 2x">
+                <img src="images/sc-logo.svg" width="70" alt="Sault College logo">
+            </picture>
         </footer>
         <a href="#top" title="Back to top">◤</a>
     </div>
