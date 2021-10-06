@@ -39,8 +39,8 @@
         <main>
             <h1>Welcome to Brett's Website</h1>
             <a href="images/picture-of-brett.png" target="_blank">
-                <img src="images/picture-of-brett.png" sizes="(max-width:500px) 150px, (min-width:500px) 500px, 800px"
-                    srcset="images/picture-of-brett-150w.png 150w, images/picture-of-brett-300w.png 300w, images/picture-of-brett.png 800w"
+                <img src="images/picture-of-brett.png" sizes="(max-width:500px) 150px, 300px"
+                    srcset="images/picture-of-brett-150w.png 150w, images/picture-of-brett-300w.png 300w"
                     alt="Picture of Brett waving and saying Hello">
             </a>
             <p>Hello, I'm Brett. When I do go outside I enjoy camping, &amp; finding good walking trails.</p>
@@ -90,10 +90,9 @@
                     href="mailto:brett.george@student.saultcollege.ca?subject=Message%20from%20CSD120%20Website">Brett
                     George</a></p>
             <picture>
-                <source media="(max-width: 70px)" srcset="images/sc-logo.png 1x">
-                <source media="(max-width: 105px)" srcset="images/sc-logo@1.5x.png 1.5x">
-                <source media="(max-width: 140px)" srcset="images/sc-logo@2x.png 2x">
-                <img src="images/sc-logo.svg" width="70" alt="Sault College logo">
+                <source type="image/svg+xml" srcset="images/sc-logo.svg">
+                <img src="images/sc-logo.png" width="70" alt="Sault College logo"
+                    srcset="images/sc-logo.png, images/sc-logo@1.5x.png 1.5x, images/sc-logo@2x.png 2x">
             </picture>
         </footer>
         <a href="#top" title="Back to top">◤</a>
