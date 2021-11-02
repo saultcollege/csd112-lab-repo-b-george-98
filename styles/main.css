@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+*.width-wrap {
+    margin: auto;
+    max-width: 960px;
+    padding: 2em 2em 2em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: none;
+    margin-bottom: 3em;
+    background-color: black;
+}
+footer > hr {
+    min-width: 300px;
+    max-width: 890px;
+    width: 50vw;   
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border: initial;
+    border-bottom: 3px dotted black;
+}
+dl > dt ~ dd:hover{
+    background-color: white;
+    color: black;
+}
+body {
+    background-color: blueviolet;
+}
+h1 {
+    color: rgb(146, 85, 197);
+}
+h2 {
+    color: rgb(156, 95, 207);
+}
+h3 {
+    color:rgb(166, 105, 217);
+}
+a {
+    color: rgb(126, 65, 177);
+    display: inline-block;
+    border-top: 4px solid rgba(255, 255, 255, 0);
+}
+a:hover {
+    border-top: 4px solid rgba(255, 255, 255, 1);
+}
+header > nav {
+    color: rgb(106, 45, 157);
+    margin-left: 2em;
+    margin-right: 2em;
+}
+::selection {
+    background-color: rgba(137, 43, 226, 0.356);
+}
+header {
+    border-top: 4px solid rgba(255, 255, 255, 0.1);
+    margin-left: -2em;
+    margin-right: -2em;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+header > nav > ul {
+    margin: 0;
+    padding: 0;
+}
+header > nav > ul > li {
+    display: inline;
+}
+table td, table th {
+    padding: 0.3em 1em;   
+}
+thead th, thead td, tfoot th, tfoot td, tbody th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+td:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+label {
+    display: inline-block;
+}
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline;
+}
+input[type=submit] {
+    border: none;
+    padding: 1em 3em;
+    color: black;
+    background-color: white;
+}
+input:invalid {
+    background-color: red;
+}
