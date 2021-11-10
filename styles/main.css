@@ -5,7 +5,7 @@
 *.width-wrap {
     margin: auto;
     max-width: 960px;
-    padding: 2em 2em 2em;
+    padding: 0 2em 2em 2em;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-top: none;
     margin-bottom: 3em;
@@ -37,17 +37,24 @@ h3 {
     color:rgb(166, 105, 217);
 }
 a {
+    color: rgb(193, 145, 233);
+}
+header nav a {
     color: rgb(126, 65, 177);
     display: inline-block;
     border-top: 4px solid rgba(255, 255, 255, 0);
+    margin: -4px 1em 0 1em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
-a:hover {
+header nav a:hover {
     border-top: 4px solid rgba(255, 255, 255, 1);
 }
 header > nav {
     color: rgb(106, 45, 157);
     margin-left: 2em;
     margin-right: 2em;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3); 
 }
 ::selection {
     background-color: rgba(137, 43, 226, 0.356);
@@ -56,7 +63,6 @@ header {
     border-top: 4px solid rgba(255, 255, 255, 0.1);
     margin-left: -2em;
     margin-right: -2em;
-    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
 }
 header > nav > ul {
     margin: 0;
@@ -74,16 +80,16 @@ thead th, thead td, tfoot th, tfoot td, tbody th {
 td {
     background-color: rgba(255, 255, 255, 0.05);
 }
-td:nth-child(even) {
+tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.15);
 }
 label {
-    display: inline-block;
+    display: block;
 }
-input[type=radio] + label, input[type=checkbox] + label {
+input[type="radio"] + label, input[type="checkbox"] + label {
     display: inline;
 }
-input[type=submit] {
+[type="submit"] {
     border: none;
     padding: 1em 3em;
     color: black;
