@@ -125,9 +125,7 @@ iframe {
 }
 fieldset ul {
     list-style-type: none;
-}
-fieldset li {
-    padding: none;
+    padding: 0;
 }
 *.bio {
     column-count: 3;
