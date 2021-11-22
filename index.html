@@ -45,6 +45,7 @@
                     <li><a href="glossary.html">Glossary</a></li>
                     <li><a href="survey.html">Survey</a></li>
                     <li><a href="lorem.html">Lorem Ipsum</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
         </header>
@@ -56,6 +57,7 @@
                     <img src="images/picture-of-brett-150w.png" sizes="(max-width:500px) 150px, 300px"
                         srcset="images/picture-of-brett-150w.png 150w, images/picture-of-brett-300w.png 300w"
                         alt="Picture of Brett waving and saying Hello">
+                    <img class="paperclip" src="images/paperclip.png">
                 </a>
                 <p>Hello, I'm Brett. When I do go outside I enjoy camping, &amp; finding good walking trails.</p>
                 <p>I (less-frequently now) play some video games - they can get really addicting for me.</p>
@@ -143,38 +145,68 @@
                 </table>
             </div>
             <h2>My Favourite Things</h2>
-            <figure>
-                <a href="https://www.blacksabbath.com/" target="_blank">
-                    <img src="images/logo.png" alt="Black Sabbath Logo">
-                </a>
-                <figcaption>Click the image to visit Black Sabbath's official website in another tab!</figcaption>
-            </figure>
-            <h3>Favourite Games</h3>
-            <ol>
-                <li>Dark Souls</li>
-                <li>Fallout: New Vegas</li>
-                <li>DOOM</li>
-            </ol>
-            <h3>Haiku</h3>
-            <p>The light of a candle<br>
-                Is transferred to another candle—<br>
-                Spring twilight<br>
-                <cite>by <span class="author">Katsushika Hokusai</span></cite>
-                <!--Found me!-->
-            </p>
-            <h3>Public Domain Audiobook</h3>
-            <audio controls>
-                <source
-                    src="http://www.archive.org/download/americanpsychology2_1302_librivox/americanpsychology2_11.mp3"
-                    type="audio/mpeg">
-                <a href="http://www.archive.org/download/americanpsychology2_1302_librivox/americanpsychology2_11.mp3">Download
-                    the audiobook</a>
-            </audio>
-            <h3>YouTube Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/KmtzQCSh6xk"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <div class="favourites">
+                <input type="radio" name="my_favourite_things" value="favband" id="favband" checked>
+                <label for="favband">
+                    <h3>Favourite Band</h3>
+                </label>
+                <div>
+                    <figure>
+                        <a href="https://www.blacksabbath.com/" target="_blank">
+                            <img src="images/logo.png" alt="Black Sabbath Logo">
+                        </a>
+                        <figcaption>Click the image to visit Black Sabbath's official website in another tab!
+                        </figcaption>
+                    </figure>
+                </div>
+                <input type="radio" name="my_favourite_things" value="favgames" id="favgames">
+                <label for="favgames">
+                    <h3>Favourite Games</h3>
+                </label>
+                <div>
+                    <ol>
+                        <li>Dark Souls</li>
+                        <li>Fallout: New Vegas</li>
+                        <li>DOOM</li>
+                    </ol>
+                </div>
+                <input type="radio" name="my_favourite_things" value="haiku" id="haiku">
+                <label for="haiku">
+                    <h3>Haiku</h3>
+                </label>
+                <div>
+                    <p>The light of a candle<br>
+                        Is transferred to another candle—<br>
+                        Spring twilight<br>
+                        <cite>by <span class="author">Katsushika Hokusai</span></cite>
+                        <!--Found me!-->
+                    </p>
+                </div>
+                <input type="radio" name="my_favourite_things" value="audiobook" id="audiobook">
+                <label for="audiobook">
+                    <h3>Public Domain Audiobook</h3>
+                </label>
+                <div>
+                    <audio controls>
+                        <source
+                            src="http://www.archive.org/download/americanpsychology2_1302_librivox/americanpsychology2_11.mp3"
+                            type="audio/mpeg">
+                        <a
+                            href="http://www.archive.org/download/americanpsychology2_1302_librivox/americanpsychology2_11.mp3">Download
+                            the audiobook</a>
+                    </audio>
+                </div>
+                <input type="radio" name="my_favourite_things" value="youtubevid" id="youtubevid">
+                <label for="youtubevid">
+                    <h3>Youtube Video</h3>
+                </label>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KmtzQCSh6xk"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
         </main>
 
         <footer>
