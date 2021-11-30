@@ -79,6 +79,7 @@ header > nav > ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 header > nav > ul > li {
     justify-content: center;
@@ -155,9 +156,14 @@ footer {
 }
 footer + a{
     text-shadow: 1px 1px white;
+    display: inline-block;
+    position: sticky;
+    bottom: 10px;
+    margin-left: -25px;
 }
 footer + a:hover {
     text-decoration: none;
+    transform: rotate(45deg);
 }
 div.favourites > input[type="radio"] + label + div{
     display: none;
@@ -175,11 +181,12 @@ div.favourites {
 }
 div.favourites > label {
    order: -1; 
+   margin-left: 1em; margin-right: 1em;
 }
 div.favourites > input[type="radio"] + label > h3:hover{
     color: red;
 }
-div.favourites > input[type="radio"] + label > h3:active{
+div.favourites > input[type="radio"]:checked + label > h3 {
     color: white;
 }
 div.favourites > input[type="radio"]:checked + label + div > *{
@@ -205,14 +212,15 @@ div.gallery > .col-span-2 {
 div.gallery > a:hover {
     transform: scale(1.1)
 }
-.paperclip {
+.bio .paperclip {
     background: none;
     box-shadow: none;
     width: 20%;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -13px;
+    right: -13px;
 }
 div.bio > a {
     display: block;
+    position: relative;
 }
