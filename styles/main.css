@@ -132,7 +132,7 @@ fieldset ul {
     padding: 0;
 }
 *.bio {
-    column-count: 3;
+    column-width: 13em;
     column-gap: 2em;
 }
 table {
@@ -163,6 +163,7 @@ footer + a{
 }
 footer + a:hover {
     text-decoration: none;
+    transition: transform 200ms;
     transform: rotate(45deg);
 }
 div.favourites > input[type="radio"] + label + div{
@@ -194,7 +195,7 @@ div.favourites > input[type="radio"]:checked + label + div > *{
 }
 div.gallery {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 10px;
 }
 div.gallery img {
@@ -210,7 +211,8 @@ div.gallery > .col-span-2 {
     grid-column: span 2;
 }
 div.gallery > a:hover {
-    transform: scale(1.1)
+    transition: transform 200ms;
+    transform: scale(1.1);
 }
 .bio .paperclip {
     background: none;
@@ -221,6 +223,84 @@ div.gallery > a:hover {
     right: -13px;
 }
 div.bio > a {
-    display: block;
+    display: inline-block;
     position: relative;
+}
+@media (max-width: 450px) {
+    .col-span-2 {
+        grid-column: 1;
+    }    
+}
+@media (max-width: 550px) { /*px @ before the table breaks*/
+    thead, tfoot, th {
+        display: none;
+    }
+    td {
+        display: block;
+        padding: 0 1rem;
+        caption-side: top;
+    }
+    tr > td:first-of-type {
+        padding-top: 0.3em;
+        font-weight: bold;
+    }
+    tr > td:last-of-type {
+        padding-bottom: 0.3em;
+        font-style: italic;
+        font-size: 0.8em;
+    }
+    tr > td:last-of-type::after {
+        content: "hrs/wk";
+    }
+}
+@media (max-width: 800px) {
+    .favourites {
+        flex-direction: column;
+    }
+    .favourites label:first-child {
+        order: 0;
+    }
+}
+@media (max-width: 885px) { /*px @ before the nav header unordered list breaks*/
+    header > nav > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav a {
+        padding-top: 0.5em;
+        border-top: none;
+    }
+    header nav a:hover {
+        text-decoration: underline;
+        border-top: none;
+    }
+}
+#menu-toggle, .sandwich-icon {
+    display: none;
+}
+@media (max-width: 885px) {
+    label[class="sandwich-icon"].sandwich-icon {
+        display: block;
+        width: 40px;
+        height: 25px;
+        border-top: 5px solid white;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    label[class="sandwich-icon"]::before, label[class="sandwich-icon"]::after {
+        content: "";
+        display: block;
+        width: 40px;
+        border-top: 5px solid top white;
+        position: absolute;
+    }
+    label[class="sandwich-icon"]::before {
+        top: 5px;
+    }
+    label[class="sandwich-icon"]::after {
+        top: 15px;
+    }
 }
