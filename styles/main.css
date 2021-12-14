@@ -99,7 +99,7 @@ tr:nth-child(even) td {
 label {
     display: block;
 }
-input[type="radio"] + label, input[type="checkbox"] + label {
+form input[type="radio"] + label, form input[type="checkbox"] + label {
     display: inline;
 }
 [type="submit"] {
@@ -227,17 +227,19 @@ div.bio > a {
     position: relative;
 }
 @media (max-width: 450px) {
-    .col-span-2 {
-        grid-column: 1;
+    div.gallery > .col-span-2 {
+        grid-column: span 1;
     }    
 }
 @media (max-width: 550px) { /*px @ before the table breaks*/
     thead, tfoot, th {
         display: none;
     }
-    td {
+    table td {
         display: block;
         padding: 0 1rem;
+    }
+    table {
         caption-side: top;
     }
     tr > td:first-of-type {
@@ -254,10 +256,10 @@ div.bio > a {
     }
 }
 @media (max-width: 800px) {
-    .favourites {
+    div.favourites {
         flex-direction: column;
     }
-    .favourites label:first-child {
+    div.favourites > label{
         order: 0;
     }
 }
@@ -279,7 +281,7 @@ div.bio > a {
     display: none;
 }
 @media (max-width: 885px) {
-    label[class="sandwich-icon"].sandwich-icon {
+    label.sandwich-icon {
         display: block;
         width: 40px;
         height: 25px;
@@ -289,18 +291,29 @@ div.bio > a {
         margin-left: auto;
         margin-right: auto;
         position: relative;
+        cursor: pointer;
+        position: relative;
     }
-    label[class="sandwich-icon"]::before, label[class="sandwich-icon"]::after {
+    label.sandwich-icon::before, label.sandwich-icon::after {
         content: "";
         display: block;
         width: 40px;
-        border-top: 5px solid top white;
+        border-top: 5px solid white;
         position: absolute;
     }
-    label[class="sandwich-icon"]::before {
+    label.sandwich-icon::before {
         top: 5px;
     }
-    label[class="sandwich-icon"]::after {
+    label.sandwich-icon::after {
         top: 15px;
+    }
+
+    #menu-toggle + label.sandwich-icon + ul {
+        height: 0;
+        overflow: hidden;
+        transition: height 200ms;
+    }
+    #menu-toggle:checked + label.sandwich-icon + ul {
+        height: 220px;
     }
 }
